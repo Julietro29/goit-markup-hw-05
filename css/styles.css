@@ -498,7 +498,7 @@ button {
     padding: 8px 0px 8px 16px;
     outline: none;
     font-size: 12px;
-    line-height: 2;
+    line-height: 1.5;
     font-weight: 400;
     letter-spacing: 0.04em;
     padding-left: 16px;
@@ -656,7 +656,8 @@ button {
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-textarea {
-    background-color: var(--c-background-modal);
+    background-color: transparent;
+    outline: transparent;
     border-radius: 4px;
     border: 1px solid var(--c-navy-blue-modal);
     padding: 8px 16px;
@@ -666,7 +667,7 @@ button {
     font-size: 12px;
     font-style: normal;
     font-weight: 400;
-    line-height: 1.2;
+    line-height: 1.17;
     letter-spacing: 0.04em;
     color: var(--c-navy-blue-modal);
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
