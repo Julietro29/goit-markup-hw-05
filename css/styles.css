@@ -711,7 +711,7 @@ input.modal-checkbox:checked+.modal-checkbox-label>.modal-checkbox-span {
 input:checked .modal-checkbox-span {
     border: none;
     background-color: var(--c-ocean);
-    fill: var(--c-white);
+    fill: var(--c-team-background);
 }
 .modal-checkbox-label {
     width: 338px;
