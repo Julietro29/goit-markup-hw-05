@@ -553,8 +553,6 @@ button {
     visibility: hidden;
     pointer-events: none;
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    /* padding: 20px;
-    transition: opacity 250ms ease-in-out, visibility 250ms ease-in-out; */ */
 }
 .modal {
     position: absolute;
@@ -565,7 +563,7 @@ button {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     background: var(--c-background-modal);
-    max-width: 408px;
+    width: 408px;
     min-height: 584px;
     padding: 72px 24px 24px 24px;
 }
@@ -658,9 +656,8 @@ button {
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-textarea {
-    background-color: transparent;
+    background-color: var(--c-background-modal);
     border-radius: 4px;
-    outline: transparent;
     border: 1px solid var(--c-navy-blue-modal);
     padding: 8px 16px;
     width: 100%;
@@ -669,7 +666,7 @@ button {
     font-size: 12px;
     font-style: normal;
     font-weight: 400;
-    line-height: 1.17;
+    line-height: 1.2;
     letter-spacing: 0.04em;
     color: var(--c-navy-blue-modal);
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -692,7 +689,7 @@ button {
 }
 
 .modal-checkbox-span {
-    display: inline-flex;
+    display: flex;
     align-items: center;
     justify-content: center;
     width: 16px;
