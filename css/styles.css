@@ -494,30 +494,33 @@ button {
 }
 .footer-input {
     width: 264px;
+    height: 40px;
     padding: 8px 0px 8px 16px;
     outline: none;
-    background-color: var(--c-background);
+    font-size: 12px;
+    line-height: 2;
+    font-weight: 400;
+    letter-spacing: 0.04em;
+    padding-left: 16px;
+    background-color: transparent;
     border-radius: 4px;
+    color: var(--c-white);
     border: 1px solid var(--WHITE, #FFF);
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-    margin-right: 24px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
 }
 .footer-input::placeholder {
     color: var(--c-white);
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 2;
-    letter-spacing: 0.04em;
 }
 .subscribe-section {
     display: flex;
+    gap: 24px;
 }
 .subscribe-button {
-    display: inline-flex;
+    min-width: 165px;
+    height: 40px;
+    display: flex;
     justify-content: center;
     align-items: center;
-    gap: 16px;
     padding: 8px 24px;
     border: none;
     color: var(--c-white);
@@ -536,6 +539,7 @@ button {
 }
 .subscribe-icon {
     fill: var(--c-white);
+    margin-left: 16px;
 }
 /* MODAL */
 .backdrop {
@@ -548,12 +552,18 @@ button {
     justify-content: center;
     visibility: hidden;
     pointer-events: none;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
     /* padding: 20px;
     transition: opacity 250ms ease-in-out, visibility 250ms ease-in-out; */ */
 }
 .modal {
-    position: relative;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
     border-radius: 4px;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     background: var(--c-background-modal);
     max-width: 408px;
     min-height: 584px;
@@ -610,12 +620,14 @@ button {
     color: var(--c-modal);
     font-size: 12px;
     font-weight: 400;
-    line-height: 1.2;
+    line-height: 1.17;
     letter-spacing: 0.04em;
     margin-bottom: 4px;
 }
 .modal-input {
-    background-color: var(--c-background-modal);
+    height: 40px;
+    background-color: transparent;
+    outline: transparent;
     border-radius: 4px;
     border: 1px solid var(--c-navy-blue-modal);
     padding: 8px 16px;
@@ -653,6 +665,13 @@ button {
     width: 100%;
     min-height: 120px;
     resize: none;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.2;
+    letter-spacing: 0.04em;
+    color: var(--c-navy-blue-modal);
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-textarea:active,
 .modal-textarea:focus {
@@ -661,11 +680,6 @@ button {
 }
 .modal-textarea::placeholder {
     color: var(--c-navy-blue-modal);
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 1.2;
-    letter-spacing: 0.04em;
 }
 .modal-field-textarea {
     margin-bottom: 16px;
